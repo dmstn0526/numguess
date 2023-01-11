@@ -10,8 +10,10 @@ print(answer)
 username = input("Hi! What's your name? ")
 print(f"Hi, {username} ! Guess the answer !")
 print("You have 10 chance! Let's START")
+count = 0
 
 while (True):
+    count += 1
     # Guess number
     guessnum = int(input("Guess the answer (1~100) : "))
     print(f"{username} ! You guessed {guessnum} !")
@@ -32,7 +34,9 @@ while (True):
         
     elif guessnum < answer:
         print(f'keep going,, That was too low, {username}..')
-    
+    if count == 10:
+        print('---------10 chance was done---------\n-------------You Failed-------------')
+        break
 
 
 
