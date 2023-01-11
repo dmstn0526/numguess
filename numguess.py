@@ -46,11 +46,12 @@ def game(username, answer):
 if __name__=='__main__':
     username,answer = game_start_set()
     game(username, answer)
-
-# game_start_set()
-# game()
-
-
-
-
+    while(True):
+        opt = input("Do you want another game? (Y/N) : ")
+        if opt == 'Y':
+            username,answer = game_start_set()
+            game(username, answer)
+        else:
+            print("OK ! BYE !")
+            break
 
