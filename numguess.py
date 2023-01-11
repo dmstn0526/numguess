@@ -9,22 +9,30 @@ print(answer)
 
 username = input("Hi! What's your name? ")
 print(f"Hi, {username} ! Guess the answer !")
+print("You have 10 chance! Let's START")
 
-# Guess number
-guessnum = int(input("Guess the answer (1~100) : "))
-print(f"{username} ! You guessed {guessnum} !")
+while (True):
+    # Guess number
+    guessnum = int(input("Guess the answer (1~100) : "))
+    print(f"{username} ! You guessed {guessnum} !")
 
-# Compare answer with user's guess
-if guessnum==answer : 
-    print("****************************")
-    sleep(1)
-    print("****************************")
-    sleep(1)
-    print("****************************")
-    sleep(1)
-    print(f'You got it right!! The anwer is {answer}!!')
-elif guessnum > answer:
-    print(f'Keep going.. That was too high, {username}..')
-elif guessnum < answer:
-    print(f'keep going,, That was too low, {username}..')
+    # Compare answer with user's guess
+    if guessnum==answer :     
+        print("****************************")
+        sleep(1)
+        print("****************************")
+        sleep(1)
+        print("****************************")
+        sleep(1)
+        print(f'You got it right!! The anwer is {answer}!!')
+        break
+
+    elif guessnum > answer:
+        print(f'Keep going.. That was too high, {username}..')
+        
+    elif guessnum < answer:
+        print(f'keep going,, That was too low, {username}..')
+    
+
+
 
